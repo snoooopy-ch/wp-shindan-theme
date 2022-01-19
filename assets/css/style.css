@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow Semi Condensed');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+  background: white;
+  font-family: 'Yu Gothic Bold';
+  color: #232323;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+button.cat-button:focus {
+	outline-color: rgb(0, 146, 204) !important;
+}
+@font-face {
+	font-family: 'やさしさゴシック';
+	src: url('../fonts/07やさしさゴシック.ttf');
+  }
+  
+  @font-face {
+	font-family: 'ZiFAei';
+	src: url('../fonts/ZiFAei.otf');
+  }
+  
+  @font-face {
+	font-family: 'コーポレートロゴ';
+	src: url('../fonts/logotypejp_mp_b_1.1.ttf');
+  }
+  
+  @media screen and (max-width:480px){
+	body {
+	  margin: 0px;
+	  width: 100%; 
+	  height:auto;
+	  font-family: Noto Sans JP,sans-serif;
+	  font-weight: 700;
+	  font-size: 16px;
+	  line-height: 1.5;
+	}
+	
+	.body-content {
+	  background-image: url('../images/background.png');
+	  background-repeat: no-repeat;
+	  background-size: 100% 100%;
+	  width: 100%;
+	  height: 100%;
+	}
+	
+	.container {
+	  text-align: center;
+	  color: white;
+	  padding-top: 20px;
+	}
+	
+	.result-container {
+	  text-align: center;
+	  /*color: #616161;*/
+	  padding-top: 10px;
+	  width: 100%;
+	  height: 100%;
+	}
+	
+	
+	#loading-fukidashi {
+	  background-image: url('../images/loading.gif');
+	  background-size: 340px 100%;
+	  background-repeat: no-repeat;
+	  background-position: center center;
+	  height: 500px;
+	
+	}
+	
+	span#loading-message {
+	  display: inline-block;
+	  white-space: nowrap;
+	  font-size: 30px;
+	  margin-top: 80px;
+	  color: white;
+	  
+	}
+	span#loading-message span {
+	  display: inline-block;
+	  width: 100px;
+	  height: 2px;
+	  vertical-align: middle;
+	  background-position: 0 0;
+	  background-repeat: repeat-x;
+	  background-size: 4px 100px;
+	  background-image:-webkit-gradient(linear, left top, right top, from(transparent), color-stop(0.5, transparent), color-stop(0.5, #000000), to(#000000) );
+	  background-image:-webkit-linear-gradient(left,transparent 2px,white 4px);
+	  background-image: linear-gradient(to right,transparent 2px,white 4px);
+	  vertical-align: middle;
+	  -webkit-animation: loading_animation 10s linear infinite;
+	  animation: loading_animation 10s linear infinite;
+	  color: white;
+	}
+	
+	@-webkit-keyframes loading_animation {
+	  0% {
+		width: 0;
+	  }
+	  100% {
+		width: 100%;
+	  }
+	}
+	@keyframes loading_animation {
+	  0% {
+		width: 0;
+	  }
+	  100% {
+		width: 100%;
+	  }
+	}
+	
+	.logo {
+	  font-family: 'コーポレートロゴ';  
+	  text-decoration: none!important;
+	  color: white;
+	  font-size: 65px;
+	  padding-left: 10px;
+	  font-weight: 600;
+	}
+	
+	#button1 {
+	  font-family: 'やさしさゴシック'; 
+	  display: inline-block;
+	  padding: 0.3em 1em;
+	  text-decoration: none;
+	  color: white;
+	  border: solid 2px white;
+	  border-radius: 3px;
+	  transition: .4s;
+	  font-size: 14px;
+	  font-size: 28px;
+	  margin-top: 10px;
+	  margin-bottom: 10px;
+	  background-color: transparent;
+	}
+	
+	#button1:hover {
+	  background: white;
+	  color: #00B6FF;
+	}
+	
+	.fukidashi {
+	  display: block;
+	  height: 340px;
+	  max-height: 75%;
+	}
+
+	
+	
+	
+	/* chrome opera */
+	@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+	  .fukidashi {
+		height: 330px!important;
+	  }
+	
+	  .anime {
+		padding-top: 5px!important;
+	  }
+	}
+	
+	#outer {
+	  background-image: url('../images/fukidashi.png');
+	  background-size: 400px 120%;
+	  background-repeat: no-repeat;
+	  background-position: center center;
+	  height: 103%;
+	}
+	
+	#inner {
+	  margin: auto;
+	  padding-top: 10px;
+	  color: black;
+	  width: 300px;
+	}
+	
+	.anime {
+	  padding-top: 3px;
+	}
+	
+	.cat-button {
+	  font-family: 'やさしさゴシック'; 
+	  display: inline-block;
+	  padding: 0.3em 1em;
+	  text-decoration: none;
+	  color: #0092CC;
+	  border: solid 2px #0092CC;
+	  background: white;
+	  border-radius: 3px;
+	  transition: .4s;
+	  font-size: 14px;
+	}
+	
+	.cat-button:hover {
+	  background: #0092CC;
+	  color: white;
+	}
+	
+	.button3 {
+	  font-family: 'やさしさゴシック'; 
+	  display: inline-block;
+	  padding: 0.3em 1em;
+	  text-decoration: none;
+	  color:#ff6262;
+	  border: solid 2px #ff6262;
+	  background: white;
+	  border-radius: 3px;
+	  transition: .4s;
+	  font-size: 14px;
+	}
+	
+	.button3:hover {
+	  background: #ff6262;
+	  color: white;
+	}
+	
+	
+	#button4 {
+	  font-family: 'やさしさゴシック'; 
+	  display: inline-block;
+	  padding: 0.3em 1em;
+	  text-decoration: none;
+	  color: #00B6FF;
+	  border: solid 2px #00B6FF;
+	  border-radius: 3px;
+	  transition: .4s;
+	  font-size: 20px;
+	  margin-bottom: 20px;
+	  background-color: transparent;
+	}
+	
+	#button4:hover {
+	  background: #00B6FF;
+	  color: white;
+	}
+	
+	.skip-button {
+	  padding-top: 5px;
+	}
+	
+	.navbar {
+	  background-color: white;
+	  text-align: center;
+	  padding: 8px 5px;
+	  font-family: 'やさしさゴシック';
+	  font-size: 14px;
+	}
+	
+	.navbar a {
+	  text-decoration: none;
+	  color: inherit;
+	}
+	
+	.navbar-brand {
+		font-family: 'コーポレートロゴ';
+		font-size: 25px;
+		font-weight: 600;
+		color: #00a4e6!important;
+	}
+	
+	.twitter {
+	  font-size: 16px;
+	  text-align: center;
+	  padding: 14px 40px;
+	  display: inline-block;
+	  padding: 0.5em 2em;
+	  text-decoration: none;
+	  background: #00acee;/*ボタン色*/
+	  color: #FFF!important;
+	  border-bottom: solid 4px #627295;
+	  border-radius: 5px;
+	}
+	
+	  .twitter:active {
+		/*ボタンを押したとき*/
+		-webkit-transform: translateY(4px);
+		transform: translateY(4px);/*下に動く*/
+		border-bottom: none;/*線を消す*/
+	  }
+	
+	#meet-new-anime {
+	  font-size: 28px;
+	  font-family: 'ZiFAei';
+	}
+	
+	#osusume {
+	  display: table;
+	  margin: auto;
+	}
+	
+	#osusume-text {
+	  background-image: url(../images/osusume-fukidashi.png);
+	  background-size: 100% 60%;
+	  background-repeat: no-repeat;
+	  background-position: center;
+	  padding: 40px 50px 35px 30px;
+	  /*color: #616161;*/
+	  display: table-cell;
+	  vertical-align: middle;
+	}
+	
+	
+	#tsubuyaki {
+	  display: table;
+	  margin: auto;
+	}
+	
+	#tsubuyaki-text {
+	  display: inline-block;
+	  background-image: url(../images/osusume-fukidashi.png);
+	  background-size: 100% 40%;
+	  background-repeat: no-repeat;
+	  background-position: center;
+	  padding: 40px 30px 40px 25px;
+	  /*color: #616161;*/
+	  display: table-cell;
+	  vertical-align: middle;
+	}
+	
+	#input-text{
+	  width: 200px; /*親要素いっぱい広げる*/
+	  padding: 8px 12px; /*ボックスを大きくする*/
+	  font-size: 14px;
+	  border-radius: 3px; /*ボックス角の丸み*/
+	  border: 2px solid #ddd; /*枠線*/
+	  box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+	  margin-bottom: 10px;
+	}
+	
+	#loading {
+	  margin-top: 5%;
+	}
+  
+	.top-girl {
+	  width: 347px;
+	  height: 290px;
+	}
+  
+	.question3-girl {
+	  width: 300px;
+	}
+	
+	
+  }
+  
+  @media screen and (min-width:480px){
+	body {
+	  font-family: Noto Sans JP,sans-serif;
+	  font-weight: 700;
+	  font-size: 16px;
+	  line-height: 1.5;
+	}
+	
+	.body-content {
+	  background-image: url('../images/background.png');
+	  background-repeat: no-repeat;
+	  background-size: 100% 100%;
+	  width: 100%;
+	  height: 100%;
+	}
+	
+	.container {
+	  text-align: center;
+	  color: white;
+	}
+	
+	.result-container {
+	  text-align: center;
+	  /*color: #616161;*/
+	  padding-top: 10px;
+	  width: 100%;
+	  height: 100%;
+	}
+	
+	#girl {
+	  margin-top: -40px;
+	}
+	
+	#loading-fukidashi {
+	  background-image: url('/static/images/loading.gif');
+	  background-size: 340px 100%;
+	  background-repeat: no-repeat;
+	  background-position: center center;
+	  height: 500px;
+	
+	}
+	
+	span#loading-message {
+	  display: inline-block;
+	  white-space: nowrap;
+	  font-size: 30px;
+	  margin-top: 80px;
+	  color: white;
+	  
+	}
+	span#loading-message span {
+	  display: inline-block;
+	  width: 100px;
+	  height: 2px;
+	  vertical-align: middle;
+	  background-position: 0 0;
+	  background-repeat: repeat-x;
+	  background-size: 4px 100px;
+	  background-image:-webkit-gradient(linear, left top, right top, from(transparent), color-stop(0.5, transparent), color-stop(0.5, #000000), to(#000000) );
+	  background-image:-webkit-linear-gradient(left,transparent 2px,white 4px);
+	  background-image: linear-gradient(to right,transparent 2px,white 4px);
+	  vertical-align: middle;
+	  -webkit-animation: loading_animation 10s linear infinite;
+	  animation: loading_animation 10s linear infinite;
+	  color: white;
+	}
+	
+	@-webkit-keyframes loading_animation {
+	  0% {
+		width: 0;
+	  }
+	  100% {
+		width: 100%;
+	  }
+	}
+	@keyframes loading_animation {
+	  0% {
+		width: 0;
+	  }
+	  100% {
+		width: 100%;
+	  }
+	}
+	
+	.logo {
+	  font-family: 'コーポレートロゴ';  
+	  text-decoration: none!important;
+	  color: white;
+	  font-size: 65px;
+	  padding-left: 10px;
+	  font-weight: 600;
+	}
+	
+	#button1 {
+	  font-family: 'やさしさゴシック'; 
+	  display: inline-block;
+	  padding: 0.3em 1em;
+	  text-decoration: none;
+	  color: white;
+	  border: solid 2px white;
+	  border-radius: 3px;
+	  transition: .4s;
+	  font-size: 14px;
+	  font-size: 28px;
+	  margin-top: 10px;
+	  margin-bottom: 10px;
+	  background-color: transparent;
+	}
+	
+	#button1:hover {
+	  background: white;
+	  color: #00B6FF;
+	}
+	
+	.fukidashi {
+	  display: block;
+	  height: 340px;
+	  max-height: 75%;
+	}
+	
+	
+	/* chrome opera */
+	@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+	  .fukidashi {
+		height: 420px!important;
+	  }
+	
+	  .anime {
+		padding-top: 5px!important;
+	  }
+	}
+  
+	.header-text {
+	  margin-top: 30px;
+	}
+  
+	#outer {
+	  background-image: url('../images/fukidashi.png');
+	  background-size: 500px 460px;
+	  background-repeat: no-repeat;
+	  background-position: center center;
+	  height: 100%;
+	}
+	
+	#inner {
+	  margin: auto;
+	  width: 380px;
+	  padding-top: 10px;
+	  color: black;
+	}
+	
+	.anime {
+	  padding-top: 3px;
+	}
+	
+	.cat-button {
+	  font-family: 'やさしさゴシック'; 
+	  display: inline-block;
+	  padding: 0.3em 1em;
+	  text-decoration: none;
+	  color: #0092CC;
+	  border: solid 2px #0092CC;
+	  background: white;
+	  border-radius: 3px;
+	  transition: .4s;
+	  font-size: 14px;
+	}
+	
+	.cat-button:hover {
+	  background: #0092CC;
+	  color: white;
+	}
+	
+	.button3 {
+	  font-family: 'やさしさゴシック'; 
+	  display: inline-block;
+	  padding: 0.3em 1em;
+	  text-decoration: none;
+	  color:#ff6262;
+	  border: solid 2px #ff6262;
+	  background: white;
+	  border-radius: 3px;
+	  transition: .4s;
+	  font-size: 14px;
+	}
+	
+	.button3:hover {
+	  background: #ff6262;
+	  color: white;
+	}
+	
+	
+	#button4 {
+	  font-family: 'やさしさゴシック'; 
+	  display: inline-block;
+	  padding: 0.3em 1em;
+	  text-decoration: none;
+	  color: #00B6FF;
+	  border: solid 2px #00B6FF;
+	  border-radius: 3px;
+	  transition: .4s;
+	  font-size: 20px;
+	  margin-bottom: 20px;
+	  background-color: transparent;
+	}
+	
+	#button4:hover {
+	  background: #00B6FF;
+	  color: white;
+	}
+	
+	.skip-button {
+	  padding-top: 5px;
+	}
+	
+	.navbar {
+	  background-color: white;
+	  text-align: center;
+	  padding: 8px 5px;
+	  font-family: 'やさしさゴシック';
+	}
+	
+	.navbar a {
+	  text-decoration: none;
+	  color: inherit;
+	}
+	
+	.navbar-brand {
+		font-family: 'コーポレートロゴ';
+		font-size: 25px;
+		font-weight: 600;
+		color: #00a4e6!important;
+	}
+	
+	.twitter {
+	  font-size: 16px;
+	  text-align: center;
+	  padding: 14px 40px;
+	  display: inline-block;
+	  padding: 0.5em 2em;
+	  text-decoration: none;
+	  background: #00acee;/*ボタン色*/
+	  color: #FFF!important;
+	  border-bottom: solid 4px #627295;
+	  border-radius: 5px;
+	}
+	
+	  .twitter:active {
+		/*ボタンを押したとき*/
+		-webkit-transform: translateY(4px);
+		transform: translateY(4px);/*下に動く*/
+		border-bottom: none;/*線を消す*/
+	  }
+	
+	#meet-new-anime {
+	  font-size: 28px;
+	  font-family: 'ZiFAei';
+	}
+	
+	#osusume {
+	  display: table;
+	  margin: auto;
+	}
+	
+	#osusume-text {
+	  background-image: url(../images/osusume-fukidashi.png);
+	  background-size: 100% 60%;
+	  background-repeat: no-repeat;
+	  background-position: center;
+	  padding: 40px 50px 35px 30px;
+	  /*color: #616161;*/
+	  display: table-cell;
+	  vertical-align: middle;
+	}
+	
+	
+	#tsubuyaki {
+	  display: table;
+	  margin: auto;
+	}
+	
+	#tsubuyaki-text {
+	  display: inline-block;
+	  background-image: url(../images/osusume-fukidashi.png);
+	  background-size: 100% 40%;
+	  background-repeat: no-repeat;
+	  background-position: center;
+	  padding: 40px 30px 40px 25px;
+	  /*color: #616161;*/
+	  display: table-cell;
+	  vertical-align: middle;
+	}
+	
+	#input-text{
+	  width: 200px; /*親要素いっぱい広げる*/
+	  padding: 8px 12px; /*ボックスを大きくする*/
+	  font-size: 14px;
+	  border-radius: 3px; /*ボックス角の丸み*/
+	  border: 2px solid #ddd; /*枠線*/
+	  box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+	  margin-bottom: 10px;
+	}
+	
+	#loading {
+	  margin-top: 5%;
+	}
+  
+	.top-girl {
+	  width: 434px;
+	  height: 363px;
+	}
+  
+	.question3-girl {
+	  width: 400px;
+	}
+	
+	.for-pc {
+	  width: 500px;
+	  margin: auto;
+	}
+  
+	.comment {
+	  text-align: left;
+	  margin-left: 110px;
+	}
+  }
+  
+  
